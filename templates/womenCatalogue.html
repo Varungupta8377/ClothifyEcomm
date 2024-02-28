@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>WomenCatalogue</title>
+
+    <meta name="description" content="" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+
+ <!-- Body -->
+
+  <body>
+    <section class="text-gray-600 body-font">
+      <header>
+        <nav class="navbar bg-body-tertiary">
+          <!-- for navigation bar -->
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img src="{{ url_for("static", filename='images/logo.jpg')}}"
+              width="80" height="0" class="d-inline-block align-text-top" />
+            </a>
+
+            <ul class="nav justify-content-end">
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('front') }}"> Home</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('menCatalogue') }}">
+                  Men</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('about') }}"> About</a>
+              </li>
+            </ul>
+
+            <ul class="nav col-md-3 text-end"></ul>
+          </div>
+        </nav>
+      </header>
+
+       <!--main data-->
+      <main>
+        <h1>
+          <br />
+          Women Catalogue
+        </h1>
+
+        <div class="container-fluid mt-3 mb-3">
+          <!--for product 1-->
+
+          <div class="row g-2">
+            <div class="col-md-4">
+              <div class="card">
+                <div class="img-container">
+                  <div
+                    class="d-flex justify-content-between align-items-center p-2 first"
+                  >
+                    <span class="percent">-25%</span>
+                    <span class="wishlist"><i class="fa fa-heart"></i></span>
+                  </div>
+                  <img src="{{ url_for("static",
+                  filename='images/Wjacket.jpg')}}" style="max-width: 100%;
+                  height: auto;" class="img-fluid"/>
+                </div>
+                <div class="product-detail-container">
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <h6 class="mb-0">Jacket</h6>
+                    <span class="text-danger font-weight-bold">$3.99</span>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center mt-2"
+                  >
+                    <div class="ratings">
+                      <i class="fa fa-star"></i> <span>4.5</span>
+                    </div>
+                    <div class="size">
+                      <label class="radio">
+                        <input type="radio" name="size1" value="small" />
+                        <span>S</span>
+                      </label>
+                      <label class="radio">
+                        <input
+                          type="radio"
+                          name="size1"
+                          value="Medium"
+                          checked
+                        />
+                        <span>M</span>
+                      </label>
+                      <label class="radio">
+                        <input type="radio" name="size1" value="Large" />
+                        <span>L</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="mt-3">
+                    <button class="btn btn-danger btn-block">Buy Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--for product 2-->
+
+            <div class="col-md-4">
+              <div class="card">
+                <div class="img-container">
+                  <div
+                    class="d-flex justify-content-between align-items-center p-2 first"
+                  >
+                    <span class="percent">-25%</span>
+                    <span class="wishlist"><i class="fa fa-heart"></i></span>
+                  </div>
+                  <img src="{{ url_for("static",
+                  filename='images/Wjeans.jpg')}}" style="max-width: 100%;
+                  height: auto;" class="img-fluid"/>
+                </div>
+                <div class="product-detail-container">
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <h6 class="mb-0">Jeans</h6>
+                    <span class="text-danger font-weight-bold">$4.99</span>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center mt-2"
+                  >
+                    <div class="ratings">
+                      <i class="fa fa-star"></i> <span>4.5</span>
+                    </div>
+                    <div class="size">
+                      <label class="radio">
+                        <input type="radio" name="size4" value="small" />
+                        <span>S</span>
+                      </label>
+                      <label class="radio">
+                        <input
+                          type="radio"
+                          name="size4"
+                          value="Medium"
+                          checked
+                        />
+                        <span>M</span>
+                      </label>
+                      <label class="radio">
+                        <input type="radio" name="size4" value="Large" />
+                        <span>L</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="mt-3">
+                    <button class="btn btn-danger btn-block">Buy Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+             <!--for product 3-->
+            <div class="col-md-4">
+              <div class="card">
+                <div class="img-container">
+                  <div
+                    class="d-flex justify-content-between align-items-center p-2 first"
+                  >
+                    <span class="percent">-35%</span>
+                    <span class="wishlist"><i class="fa fa-heart"></i></span>
+                  </div>
+                  <img src="{{ url_for("static",
+                  filename='images/dress2.jpg')}}" style="max-width: 100%;
+                  height:auto;" class="img-fluid"/>
+                </div>
+                <div class="product-detail-container">
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <h6 class="mb-0">Dress</h6>
+                    <span class="text-danger font-weight-bold">$3.99</span>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center mt-2"
+                  >
+                    <div class="ratings">
+                      <i class="fa fa-star"></i> <span>4.5</span>
+                    </div>
+                    <div class="size">
+                      <label class="radio">
+                        <input type="radio" name="size3" value="small" />
+                        <span>S</span>
+                      </label>
+                      <label class="radio">
+                        <input
+                          type="radio"
+                          name="size3"
+                          value="Medium"
+                          checked
+                        />
+                        <span>M</span>
+                      </label>
+                      <label class="radio">
+                        <input type="radio" name="size3" value="Large" />
+                        <span>L</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="mt-3">
+                    <button class="btn btn-danger btn-block">Buy Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+             <!--for product 4-->
+
+            <div class="col-md-4">
+              <div class="card">
+                <div class="img-container">
+                  <div
+                    class="d-flex justify-content-between align-items-center p-2 first"
+                  >
+                    <span class="percent">-25%</span>
+                    <span class="wishlist"><i class="fa fa-heart"></i></span>
+                  </div>
+                  <img src="{{ url_for("static",
+                  filename='images/dress1.jpg')}}" style="max-width: 100%;
+                  height: auto;" class="img-fluid"/>
+                </div>
+                <div class="product-detail-container">
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <h6 class="mb-0">Wedding Dress</h6>
+                    <span class="text-danger font-weight-bold">$3.99</span>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center mt-2"
+                  >
+                    <div class="ratings">
+                      <i class="fa fa-star"></i> <span>4.5</span>
+                    </div>
+                    <div class="size">
+                      <label class="radio">
+                        <input type="radio" name="size6" value="small" />
+                        <span>S</span>
+                      </label>
+                      <label class="radio">
+                        <input
+                          type="radio"
+                          name="size6"
+                          value="Medium"
+                          checked
+                        />
+                        <span>M</span>
+                      </label>
+                      <label class="radio">
+                        <input type="radio" name="size6" value="Large" />
+                        <span>L</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="mt-3">
+                    <button class="btn btn-danger btn-block">Buy Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+             <!--for product 5-->
+
+            <div class="col-md-4">
+              <div class="card">
+                <div class="img-container">
+                  <div
+                    class="d-flex justify-content-between align-items-center p-2 first"
+                  >
+                    <span class="percent">-25%</span>
+                    <span class="wishlist"><i class="fa fa-heart"></i></span>
+                  </div>
+                  <img src="{{ url_for("static",
+                  filename='images/sweater.jpg')}}" style="max-width: 100%;
+                  height: auto;" class="img-fluid"/>
+                </div>
+                <div class="product-detail-container">
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <h6 class="mb-0">Sweater</h6>
+                    <span class="text-danger font-weight-bold">$3.99</span>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center mt-2"
+                  >
+                    <div class="ratings">
+                      <i class="fa fa-star"></i> <span>4.5</span>
+                    </div>
+                    <div class="size">
+                      <label class="radio">
+                        <input type="radio" name="size5" value="small" />
+                        <span>S</span>
+                      </label>
+                      <label class="radio">
+                        <input
+                          type="radio"
+                          name="size5"
+                          value="Medium"
+                          checked
+                        />
+                        <span>M</span>
+                      </label>
+                      <label class="radio">
+                        <input type="radio" name="size5" value="Large" />
+                        <span>L</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="mt-3">
+                    <button class="btn btn-danger btn-block">Buy Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+             <!--for product 6-->
+
+            <div class="col-md-4">
+              <div class="card">
+                <div class="img-container">
+                  <div
+                    class="d-flex justify-content-between align-items-center p-2 first"
+                  >
+                    <span class="percent">-15%</span>
+                    <span class="wishlist"><i class="fa fa-heart"></i></span>
+                  </div>
+                  <img src="{{ url_for("static",
+                  filename='images/Wtshirt.jpg')}}" style="max-width: 100%;
+                  height: auto;" class="img-fluid"/>
+                </div>
+                <div class="product-detail-container">
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <h6 class="mb-0">Top</h6>
+                    <span class="text-danger font-weight-bold">$1.99</span>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center mt-2"
+                  >
+                    <div class="ratings">
+                      <i class="fa fa-star"></i> <span>4.5</span>
+                    </div>
+                    <div class="size">
+                      <label class="radio">
+                        <input type="radio" name="size2" value="small" />
+                        <span>S</span>
+                      </label>
+                      <label class="radio">
+                        <input
+                          type="radio"
+                          name="size2"
+                          value="Medium"
+                          checked
+                        />
+                        <span>M</span>
+                      </label>
+                      <label class="radio">
+                        <input type="radio" name="size2" value="Large" />
+                        <span>L</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="mt-3">
+                    <button class="btn btn-danger btn-block">Buy Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </section>
+  </body>
+</html>
